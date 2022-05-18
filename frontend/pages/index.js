@@ -1,4 +1,4 @@
-import Layout from '../componenets/Layout';
+import Layout from '../components/Layout';
 
 const Index = () => {
     return (
