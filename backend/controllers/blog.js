@@ -120,7 +120,7 @@ exports.update = (req, res) => {
             oldBlog = _.merge(oldBlog, fields);
             oldBlog.slug = slugBeforeMerge;
 
-            const { body, desc, categories, tags } = fields;
+            const { body, desc } = fields;
 
             if (body) {
                 oldBlog.excerpt = smartTrim(body, 320, ' ', ' ...');
@@ -163,4 +163,20 @@ exports.listAllBlogsCategoriesTags = (req, res) => {
             blogs = data; 
             res.json({ blogs,size: blogs.length });
         });
+};
+
+exports.listByUser = (req, res) => {
+
+        username =  req.params.username;
+        Blog.find({ postedBy: 'Siva' })
+            .select('_id title slug postedBy')
+            .exec((err, data) => {
+                if (err) {
+                    return res.status(400).json({
+                        error: errorHandler(err)
+                    });
+                }
+                res.json(data);
+            });
+
 };

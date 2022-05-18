@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import Layout from '../../componenets/Layout';
+import Layout from '../../components/Layout';
 import { useState, useEffect } from 'react';
 import { singleBlog } from '../../actions/blog';
 import { API, DOMAIN, APP_NAME, FB_APP_ID } from '../../config';

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import Router from 'next/router';
-import { getCookie, isAuth } from '../../actions/auth';
+import { getCookie } from '../../actions/auth';
 import { list, removeBlog } from '../../actions/blog';
 import moment from 'moment';
 
@@ -43,19 +43,11 @@ const BlogRead = ({ username }) => {
     };
 
     const showUpdateButton = blog => {
-        if (isAuth() && isAuth().role === 0) {
             return (
                 <Link href={`/user/crud/${blog.slug}`}>
                     <a className="ml-2 btn btn-sm btn-warning">Update</a>
                 </Link>
             );
-        } else if (isAuth() && isAuth().role === 1) {
-            return (
-                <Link href={`/admin/crud/${blog.slug}`}>
-                    <a className="ml-2 btn btn-sm btn-warning">Update</a>
-                </Link>
-            );
-        }
     };
 
     const showAllBlogs = () => {
@@ -64,7 +56,7 @@ const BlogRead = ({ username }) => {
                 <div key={i} className="pb-5">
                     <h3>{blog.title}</h3>
                     <p className="mark">
-                        Written by {blog.postedBy.name} | Published on {moment(blog.updatedAt).fromNow()}
+                        Written by {blog.postedBy}
                     </p>
                     <button className="btn btn-sm btn-danger" onClick={() => deleteConfirm(blog.slug)}>
                         Delete

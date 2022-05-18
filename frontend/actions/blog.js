@@ -1,5 +1,6 @@
 import fetch from 'isomorphic-fetch';
 import { API } from '../config';
+import queryString from 'query-string';
 
 export const createBlog = (blog, token = "text") => {
     return fetch(`${API}/blog`, {
@@ -63,14 +64,10 @@ export const list = username => {
         .catch(err => console.log(err));
 };
 
-export const removeBlog = (slug, token) => {
+export const removeBlog = (slug, token = 'text') => {
     let deleteBlogEndpoint;
+    deleteBlogEndpoint = `${API}/user/blog/${slug}`;
 
-    if (isAuth() && isAuth().role === 1) {
-        deleteBlogEndpoint = `${API}/blog/${slug}`;
-    } else if (isAuth() && isAuth().role === 0) {
-        deleteBlogEndpoint = `${API}/user/blog/${slug}`;
-    }
 
     return fetch(`${deleteBlogEndpoint}`, {
         method: 'DELETE',
@@ -87,14 +84,10 @@ export const removeBlog = (slug, token) => {
         .catch(err => console.log(err));
 };
 
-export const updateBlog = (blog, token, slug) => {
+export const updateBlog = (blog, token = 'text', slug) => {
     let updateBlogEndpoint;
+    updateBlogEndpoint = `${API}/user/blog/${slug}`;
 
-    if (isAuth() && isAuth().role === 1) {
-        updateBlogEndpoint = `${API}/blog/${slug}`;
-    } else if (isAuth() && isAuth().role === 0) {
-        updateBlogEndpoint = `${API}/user/blog/${slug}`;
-    }
 
     return fetch(`${updateBlogEndpoint}`, {
         method: 'PUT',

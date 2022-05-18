@@ -6,8 +6,11 @@ const {
     listAllBlogsCategoriesTags,
     read,
     remove,
-    update
+    update,
+    listByUser
 } = require('../controllers/blog');
+
+const { canUpdateDeleteBlog } = require('../controllers/auth');
 
 
 router.post('/blog', create);
@@ -16,5 +19,9 @@ router.get('/blog/:slug', read);
 router.delete('/blog/:slug', remove);
 router.post('/blogs-categories-tags', listAllBlogsCategoriesTags);
 router.put('/blog/:slug', update);
+
+router.get('/:username/blogs', listByUser);
+router.delete('/user/blog/:slug', canUpdateDeleteBlog, remove);
+router.put('/user/blog/:slug', canUpdateDeleteBlog, update);
 
 module.exports = router;

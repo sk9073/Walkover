@@ -43,6 +43,13 @@ const Header = () => {
                   <NavLink>Your works</NavLink>
                 </Link>
               </NavItem>
+
+              <NavItem>
+                <Link href="/user">
+                  <NavLink>`Siva's Dashboard`</NavLink>
+                </Link>
+              </NavItem>
+
             </React.Fragment>
 
             <NavItem>

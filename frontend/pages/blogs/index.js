@@ -10,7 +10,7 @@ import { API, DOMAIN, APP_NAME , FB_APP_ID} from '../../config';
 const Blogs = ({ blogs, totalBlogs, blogsLimit, blogSkip, router }) => {
     const head = () => (
         <Head>
-            <title>Programming blogs | {APP_NAME}</title>
+            <title>Works | {APP_NAME}</title>
             <meta
                 name="description"
                 content="Programming blogs and tutorials on react node next vue php laravel and web developoment"
@@ -91,7 +91,7 @@ const Blogs = ({ blogs, totalBlogs, blogsLimit, blogSkip, router }) => {
                         <header>
                             <div className="col-md-12 pt-3">
                                 <h1 className="display-4 font-weight-bold text-center">
-                                    Reports
+                                    Your Works
                                 </h1>
                             </div>
                         </header>
@@ -107,7 +107,7 @@ const Blogs = ({ blogs, totalBlogs, blogsLimit, blogSkip, router }) => {
 
 Blogs.getInitialProps = () => {
     let skip = 0;
-    let limit = 2;
+    let limit = 6;
     return listBlogsWithCategoriesAndTags(skip, limit).then(data => {
         if (data.error) {
             console.log(data.error);
