@@ -29,11 +29,6 @@
       "static/chunks/webpack.js",
       "static/chunks/pages/blogs/[slug].js"
     ],
-    "/user": [
-      "static/chunks/main.js",
-      "static/chunks/webpack.js",
-      "static/chunks/pages/user.js"
-    ],
     "/user/crud/[slug]": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
