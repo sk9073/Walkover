@@ -64,7 +64,7 @@ export const list = username => {
         .catch(err => console.log(err));
 };
 
-export const removeBlog = (slug, token = 'text') => {
+export const removeBlog = (slug, token) => {
     let deleteBlogEndpoint;
     deleteBlogEndpoint = `${API}/user/blog/${slug}`;
 

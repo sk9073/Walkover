@@ -33,8 +33,8 @@ const BlogUpdate = ({ router }) => {
     const initBlog = () => {
         if (router.query.slug) {
             singleBlog(router.query.slug).then(data => {
-                if (data.error) {
-                    console.log(data.error);
+                if (data) {
+                    console.log(data);
                 } else {
                     setValues({ ...values, title: data.title });
                     setBody(data.body);

@@ -48,9 +48,7 @@ const CreateBlog = ({ router }) => {
                 console.log(data);
                 setValues({ ...values, error: data.error });
             } else {
-                console.log("heyy");
-
-                setValues({ ...values, title: '', error: '', success: `A new blog titled "${data.title}" is created` });
+                setValues({ ...values, title: '' ,error: '', success: `A new blog titled ${data.title} is created` });
                 setBody('');
             }
         });

@@ -12,18 +12,8 @@ const Layout = ({ children }) => {
             <footer className={styles.footer}>  
                 <div className={styles.pages}>      
                     <h3>Pages</h3>  
-                    <a href="/about/about">About Us</a>|       
-                    <a href="/contact/contact">Contact Us</a>|       
-                    <a href="/blogs">Blogs</a>|      
-                    <a href="/signin">Login</a>|       
-                    <a href="/signup">Sign Up</a>|       
-                </div>        
-                <div className={styles.doc}>  
-                    <h3>Documents</h3>     
-                    <a href="">Privacy Policy</a>      
-                    <a href="">Terms of Use</a>       
-                    <a href="">Refund Policy</a>       
-                </div>        
+                    <a href="/blogs">Works</a>            
+                </div>             
                 <div className={styles.social}> 
                     <h3>Follow us</h3>    
                     <a href="www.facebook.com" target="_blanck"><i className="fab fa-facebook-f"></i></a>       

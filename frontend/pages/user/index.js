@@ -11,20 +11,19 @@ const UserIndex = () => {
     return (
         <Layout>
                 <div className="container">
-                    <div className="row">
-                        <div className="col-md-4">
-                            <ul class="list-group">
-
-                                <li className="list-group-item">
-                                    <a href="/user/crud/blog">Add your Work</a>
+                    <div className="row ">
+                        <div className="col-md-4 d-flex align-items-center">
+                            <ul className="list-group">
+                                <li className="list-group-item list-group-item-action">
+                                    <Link href="/user/crud/blog">
+                                        <a>Add your Work</a>
+                                    </Link>
                                 </li>
-
-                                <li className="list-group-item">
+                                <li className="list-group-item list-group-item-action">
                                     <Link href="/user/crud/blogs">
                                         <a>Update/Delete Your Works</a>
                                     </Link>
                                 </li>
-
                             </ul>
                         </div>
                         <div className="col-md-8">
@@ -37,8 +36,8 @@ const UserIndex = () => {
                     <div className="row">
                             <div className="col-md-1"></div>
                             <div className="col-md-10">
-                                <q style={styleObj}>If we knew What it was we were doing it would not be reasearch , Would it?</q>
-                                <h6 style={{fontStyle: 'italic',textAlign:'right'}}>--Albert Einstein</h6>
+                                <q style={styleObj}>Hard work beats talent when talent doesn't work hard</q>
+                                <h6 style={{fontStyle: 'italic',textAlign:'right'}}>--Tim Notke, coach</h6>
                             </div>
                     </div>
                 </div>

@@ -26,10 +26,10 @@ const BlogRead = ({ username }) => {
 
     const deleteBlog = slug => {
         removeBlog(slug, token).then(data => {
-            if (data.error) {
+            if (data) {
                 console.log(data.error);
             } else {
-                setMessage(data.message);
+                setMessage(data);
                 loadBlogs();
             }
         });
