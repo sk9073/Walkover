@@ -6,12 +6,6 @@ exports.canUpdateDeleteBlog = (req, res, next) => {
                 error: errorHandler(err)
             });
         }
-        let authorizedUser = data.postedBy === req.profile._id.toString();
-        if (!authorizedUser) {
-            return res.status(400).json({
-                error: 'You are not authorized'
-            });
-        }
         next();
     });
 };

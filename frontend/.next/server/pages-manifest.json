@@ -2,12 +2,7 @@
   "/_document": "pages/_document.js",
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
-  "/blogs": "pages/blogs.js",
-  "/": "pages/index.js",
-  "/next/dist/pages/_error": "pages/next/dist/pages/_error.js",
   "/user": "pages/user.js",
-  "/blogs/[slug]": "pages/blogs/[slug].js",
-  "/user/crud/blog": "pages/user/crud/blog.js",
-  "/user/crud/blogs": "pages/user/crud/blogs.js",
-  "/user/crud/[slug]": "pages/user/crud/[slug].js"
+  "/user/crud/[slug]": "pages/user/crud/[slug].js",
+  "/blogs/[slug]": "pages/blogs/[slug].js"
 }
